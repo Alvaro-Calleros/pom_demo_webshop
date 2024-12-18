@@ -1,0 +1,90 @@
+{
+    "Register": [
+      {
+        "TestCaseID": "TC01_Register_SuccessfulUniqueEmail",
+        "Descripción": "Verificar que un usuario puede registrarse exitosamente utilizando un correo único.",
+        "Precondiciones": "El usuario accede a la página de registro.",
+        "Pasos": [
+          "Navegar a la página de registro.",
+          "Rellenar el formulario de registro con datos válidos y un correo único.",
+          "Hacer clic en el botón Submit."
+        ],
+        "ResultadosEsperados": [
+          "El registro se completa exitosamente.",
+          "El mensaje de éxito se muestra en pantalla."
+        ]
+      },
+      {
+        "TestCaseID": "TC02_Register_FailureDuplicateEmail",
+        "Descripción": "Verificar que el registro falla cuando se utiliza un correo electrónico existente.",
+        "Precondiciones": "El correo electrónico ya está registrado en el sistema.",
+        "Pasos": [
+          "Navegar a la página de registro.",
+          "Rellenar el formulario con un correo duplicado.",
+          "Hacer clic en el botón Submit."
+        ],
+        "ResultadosEsperados": [
+          "Se muestra un mensaje de error indicando que el correo ya está en uso.",
+          "El registro no se completa."
+        ]
+      }
+    ],
+    "Login": [
+      {
+        "TestCaseID": "TC03_Simple_SuccessfulLogin",
+        "Descripción": "Verificar que un usuario puede iniciar sesión exitosamente con credenciales válidas.",
+        "Precondiciones": [
+          "El usuario está registrado previamente.",
+          "El usuario tiene credenciales válidas disponibles."
+        ],
+        "Pasos": [
+          "Navegar a la página de inicio de sesión.",
+          "Introducir correo electrónico y contraseña válidos.",
+          "Hacer clic en el botón Log In."
+        ],
+        "ResultadosEsperados": [
+          "El usuario es redirigido a su cuenta o página principal.",
+          "El correo del usuario se muestra como validación de inicio de sesión."
+        ]
+      },
+      {
+        "TestCaseID": "TC04_Login_PasswordRecovery",
+        "Descripción": "Verificar que un usuario puede recuperar su contraseña correctamente.",
+        "Precondiciones": "El usuario tiene un correo electrónico registrado.",
+        "Pasos": [
+          "Navegar a la página de inicio de sesión.",
+          "Hacer clic en el enlace Recover Password.",
+          "Introducir un correo electrónico registrado.",
+          "Hacer clic en el botón Recover."
+        ],
+        "ResultadosEsperados": [
+          "Se muestra un mensaje confirmando el envío del correo de recuperación.",
+          "El correo de recuperación llega al usuario registrado."
+        ]
+      }
+    ],
+    "Purchase": [
+      {
+        "TestCaseID": "TC05_Purchase_AddJewelryAndPhoneCovers",
+        "Descripción": "Verificar que un usuario puede agregar joyería y fundas de teléfono al carrito y completar la compra.",
+        "Precondiciones": [
+          "El usuario debe haber iniciado sesión.",
+          "El usuario debe tener una dirección de envío configurada."
+        ],
+        "Pasos": [
+          "Navegar a la sección de joyería.",
+          "Agregar una joya al carrito.",
+          "Navegar a la sección de fundas de teléfono.",
+          "Seleccionar fundas de varias marcas y colores.",
+          "Agregar las fundas seleccionadas al carrito.",
+          "Proceder al proceso de pago.",
+          "Completar la compra."
+        ],
+        "ResultadosEsperados": [
+          "Los productos seleccionados aparecen en el carrito correctamente.",
+          "La compra se procesa exitosamente.",
+          "Se muestra un mensaje de confirmación de la orden."
+        ]
+      }
+    ]
+  }
